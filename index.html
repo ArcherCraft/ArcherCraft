@@ -8,6 +8,9 @@
   $(function(){
     $('#tabs').tabs();
     $( "#menu" ).menu();
+     $( "#resizable" ).resizable({
+ghost: true
+});
     });
 </script>
   </head>
@@ -19,6 +22,9 @@
     </ul>
     <div id="tabs-1"></div>
      <style>
+      #resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
+.ui-resizable-ghost { border: 1px dotted gray; }
 .ui-menu { width: 150px; }
 </style>
        <style>

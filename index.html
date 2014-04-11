@@ -143,7 +143,26 @@ icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
 </div>
 <div class="portlet">
 <div class="portlet-header">Images</div>
-<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+<div class="portlet-content"><?php
+	$flipCount = 0;
+	do {
+		$flip = rand(0,1);
+		$flipCount ++;
+		if ($flip){
+			echo "<div class=\"coin\">H</div>";
+		}
+		else {
+			echo "<div class=\"coin\">T</div>";
+		}
+	} while ($flip);
+	$verb = "were";
+	$last = "flips";
+	if ($flipCount == 1) {
+		$verb = "was";
+		$last = "flip";
+	}
+	echo "<p>There {$verb} {$flipCount} {$last}!</p>";
+	?></div>
 </div>
 </div>
     </div>
